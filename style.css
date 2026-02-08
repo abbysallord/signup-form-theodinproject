@@ -87,11 +87,11 @@ input{
 
 input:focus{
     outline: 2px solid rgb(137, 137, 239);
-    box-shadow: 1px 1px 10px #aaa;
+    box-shadow: 1px 1px 10px #F0F0F0;
 }
 
 input[type="password"]{
-    outline: 2px solid red;
+    outline: 2px solid #F0F0F0;
 }
 
 button{
@@ -110,9 +110,17 @@ span{
 }
 
 input:invalid{
-    outline: 2px solid red;
+    outline: 2px solid #FF746C;
+    box-shadow: 8px 8px 10px #7d1224;
 }
 
 input:valid{
     outline: 2px solid #3d5c29;
+    box-shadow: 10px 10px 10px #418d1b;
+}
+
+.tag-line{
+    font-size: 23px;
+    font-style: italic;
+    font-weight: light;
 }

@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="text">
-            <strong><h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>Sign up <em>now</em> to get started.</h2></strong>
+            <h2 class="tag-line">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>Sign up <em>now</em> to get started.</h2>
             <br>
             <strong><h2>You <em>know</em> you want to.</h2></strong>
             <br><br>
@@ -27,41 +27,33 @@
                     <div class="fields">
                         <div>
                             <label for="">FIRST NAME</label><br>
-                            <input type="text" required>
+                            <input type="text" id="firstname" required>
                         </div>
                         <div>
                             <label for="">LAST NAME</label><br>
-                            <input type="text" required>
+                            <input type="text" id="lastname" required>
                         </div>
                     </div>
                     <div class="fields">
                         <div>
                             <label for="">EMAIL</label><br>
-                            <input type="email" required>
+                            <input type="email" id="email" required>
                         </div>
                         <div>
-                            <label for="">PHONE NUMBER</label><br>
-                            <input type="number" required>
+                            <label for="">PASSWORD</label><br>
+                            <input type="password" id="password" minlength="8" maxlength="25" required>
                         </div>
                     </div>
-                    <div class="fields">
-                        <div>
-                            <label for="">EMAIL</label><br>
-                            <input type="password" minlength="8" maxlength="25" required>
-                        </div>
-                        <div>
-                            <label for="">PHONE NUMBER</label><br>
-                            <input type="password" minlength="8" maxlength="25" required>
-                        </div>
-                    </div>
+                    
                 </form>
             </div>
             <div>
-                <button>Create Account</button>
+                <button style="font-size:16px;" onclick="window.location.href='createaccount.html'">Create Account</button>
             </div>
             <br>
-            <strong><p>Already have an account? <span>Log in</span></p></strong>
+            <strong><p>Already have an account? <span onclick="window.location.href='log-inpage.html'">Log in</span></p></strong>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
