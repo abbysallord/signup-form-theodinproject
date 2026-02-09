@@ -25,30 +25,36 @@
                 <h2>Let's do this!</h2><br>
                 <form action="#">
                     <div class="fields">
-                        <div>
+                        <div class="input-container">
+                            
+                            <input type="text" id="firstname"  required>
                             <label for="">FIRST NAME</label><br>
-                            <input type="text" id="firstname" required>
                         </div>
-                        <div>
-                            <label for="">LAST NAME</label><br>
+                        <div class="input-container">
+                            
                             <input type="text" id="lastname" required>
+                            <label for="">LAST NAME</label><br>
                         </div>
                     </div>
                     <div class="fields">
-                        <div>
-                            <label for="">EMAIL</label><br>
+                        <div class="input-container">
+                            
                             <input type="email" id="email" required>
+                            <label for="">EMAIL</label><br>
                         </div>
-                        <div>
-                            <label for="">PASSWORD</label><br>
+                        <div class="input-container">
+                            
                             <input type="password" id="password" minlength="8" maxlength="25" required>
+                            
+                            
+                            <label for="">PASSWORD</label><br>
                         </div>
                     </div>
                     
                 </form>
             </div>
             <div>
-                <button style="font-size:16px;" onclick="window.location.href='createaccount.html'">Create Account</button>
+                <button style="font-size:16px;" onclick=login()>Create Account</button>
             </div>
             <br>
             <strong><p>Already have an account? <span onclick="window.location.href='log-inpage.html'">Log in</span></p></strong>

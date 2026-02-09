@@ -16,7 +16,7 @@ fetch("http://localhost:3000/users", {
         password: password
     })
 })
-,then(response => response.text())
+.then(response => response.text())
 .then(result => alert(result));
 
 }

@@ -16,7 +16,7 @@ function saveUsers(){
 }
 
 const server=http.createServer((req,res)=>{
-  if (req.method="POST" && req.url==="/users"){
+  if (req.method==="POST" && req.url==="/users"){
     let body="";
      req.on("data",chunk => body +=chunk);
      req.on("end",()=>{
