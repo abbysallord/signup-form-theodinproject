@@ -3,7 +3,7 @@ function registeruser() {
     const lastname = document.getElementById("lastname").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-
+    console.log("register button clicked");
 fetch("http://localhost:3000/users", {
     method: "POST",
     headers: {

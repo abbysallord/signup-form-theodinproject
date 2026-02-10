@@ -2,7 +2,7 @@
     "name": "login-system",
     "version": "1.0.0",
     "description": "A simple login system built with HTML, CSS, and JavaScript.",
-    "main":"server.js",
+    "main":"index.html",
     "scripts":{
         "start": "node server.js"
     }  

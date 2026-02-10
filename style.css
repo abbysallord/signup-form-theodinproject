@@ -54,9 +54,11 @@
   
 }
 /* on focus → add outline */
-.input-container input:focus + input {
-    outline: 4px solid rgb(137, 93, 147);
-    
+.input-container input:focus {
+    outline: 2px solid rgb(137, 93, 147);
+}
+.input-container input:valid{
+    outline: 2px solid rgb(103, 147, 119);
 
 }
 .fields *{
@@ -80,27 +82,7 @@ span:hover{
     justify-content: center;
     min-height: 100vh;
 }
-@media(min-width:800px){
-    .main{
-        flex-direction:row;
-    } 
-    .images{
-        width: 30%;
-        min-height: 100vh;
-        height:auto;
-    }
-    .text{
-        width: 70%;
-        min-height:100vh;
-    }
 
-}
-
-
-
-
-    
-    
     .images{
     display: flex;
     align-items: center;
@@ -184,7 +166,26 @@ button{
     padding-bottom: 2rem;
 }
 
-
+@media(min-width:800px){
+    .main{
+        flex-direction:row;
+    } 
+    .images{
+        width: 30%;
+        min-height: 100vh;
+        height:auto;
+    }
+    .text{
+        min-width: 70%;
+        min-height:100vh;
+    }
+    .fields{
+    
+    flex-direction:row;
+    gap: 2px;
+    
+}
+}
 
 
 
