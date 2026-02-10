@@ -5,24 +5,117 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+
+.input-container {
+  position: relative;
+  margin-top: 25px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 14px 10px;
+  outline: none;
+  font-size: 16px;
+  background-color: #F5F5F5 ;
+  padding: 10px;
+  border:1px solid black;
+  border-radius:4px;
+}
+
+/* Default: label ABOVE input */
+.input-container label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 0 5px;
+  font-size: 10px;
+  color: #5c052f;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  border-radius:3px;
+  background-color:#F5F5F5;
+}
+
+/* On focus → move label INSIDE */
+.input-container input:focus + label {
+  top: -17px;
+  font-size: 12px;
+  color:#531332;
+  font-style:italic;
+  
+}
+
+/* On valid → keep label INSIDE */
+.input-container input:valid + label {
+  top: -8px;
+  font-size: 12px;
+  color:#5c052f;
+  
+}
+/* on focus → add outline */
+.input-container input:focus + input {
+    outline: 4px solid rgb(137, 93, 147);
+    
+
+}
+.fields *{
+    padding: 4px;
+    margin: 5px;
+}
+.text strong, button{
+    margin-left: 2rem;
+}
+
+span{
+    color: #3d5c29;
+}
+
+span:hover{
+    color:#417d65;
+}
 .main{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    min-height: 100vh;
+}
+@media(min-width:800px){
+    .main{
+        flex-direction:row;
+    } 
+    .images{
+        width: 30%;
+        min-height: 100vh;
+        height:auto;
+    }
+    .text{
+        width: 70%;
+        min-height:100vh;
+    }
+
+}
+
+
+
+
+    
+    
+    .images{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-}
-
-.images{
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    opacity: .75;
-    width: 30%;
-    height: 100vh;
+    opacity: 0.75;
+    width: 100%;
+    height:30vh;
     background-size: cover;
-    background-image: url(halie-west-25xggax4bSA-unsplash.jpg);
+    background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
+   }
+.addline{
+    font-size:20px;
+    font-family:Roboto;
+     margin-left: 20px;
 }
-
 @font-face {
     font-family: norse-bold;
     src: url(Norse-Bold.otf);
@@ -31,19 +124,18 @@
 .odin h1{
     color: #fff;
     font-family: norse-bold, sans-serif;
-    font-size: 100px;
+    font-size: 80px;
     opacity: 1;
 }
 
 .odin img{
     opacity: 1;
+    
 }
-
 .odin{
     display: flex;
     align-items: center;
-    margin-top: 10rem;
-    width: 100%;
+    min-width: 100%;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -52,67 +144,75 @@
     background-color: #ddd;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
-    gap: 1rem;
+    gap: 0rem;
+    width:100%;
 }
-
 .fields{
     display: flex;
-    gap: 7px;
+    flex-direction:column;
+    gap: 2px;
+    flex-wrap:wrap;
 }
-
-.fields *{
-    padding: 7px;
-    margin: 7px;
+.tag-line{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: light;
+    margin-left: 20px;
+    margin-top: 1rem;
+    font-family:'Times New Roman', Times, serif;
+}
+button{
+    padding: 0.5rem;
+    width: 12rem;
+    border: none;
+    border-radius:5px 0px 5px 5px;
+    background-color: #3d5c29;
+    color: #fff;
+    font-weight: light;
+    margin-top: 1rem;
+    
 }
 
 .form{
-    background-color: #fff;
+    background-color: #f8faf7;
     width: 100%;
     box-shadow: 3px 3px 10px #aaa;
-    padding-left: 3rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding:0.5rem 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-.text strong, button{
-    margin-left: 3rem;
-}
 
-input{
-    border-radius: 3px;
-    border: 1px solid #E5E7EB;
-}
 
-input:focus{
-    outline: 2px solid rgb(137, 137, 239);
-    box-shadow: 1px 1px 10px #aaa;
-}
 
-input[type="password"]{
-    outline: 2px solid red;
-}
 
-button{
-    padding: 1rem;
-    width: 12rem;
-    border: none;
-    border-radius: 7px;
-    background-color: #3d5c29;
-    color: #fff;
-    font-weight: bold;
-    margin-top: 1.5rem;
-}
 
-span{
-    color: #3d5c29;
-}
 
-input:invalid{
-    outline: 2px solid red;
-}
 
-input:valid{
-    outline: 2px solid #3d5c29;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* style for login page */
+
+
