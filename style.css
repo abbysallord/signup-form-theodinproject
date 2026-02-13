@@ -382,7 +382,6 @@ input[type=checkbox]{
     color:#93a8dc;
  }
  .errormsg{
-    color:#e8ebee;
     font-size:14px;
     align-self:left;
     justify-self:left;
@@ -460,12 +459,32 @@ input[type=checkbox]{
     left:18px;
     
 }
+.input-content input:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0px 1000px #01010b inset !important;
+    -webkit-text-fill-color:#f1e5e5 !important;
+}
 .errmsg{
-    color:#e8ebee;
     font-size:14px;
-    margin-left: 18px;
-    padding-right:20px;
+    margin-left:18px;
+    display:none;
     color:#dd8b97;
 }
  
-
+.emailcontainer{
+    display:block;
+}
+.passwordcontainer{
+    display:none;
+}
+.errmsg2{
+    font-size:14px;
+    margin-left:-85px;
+    display:none;
+    color:#dd8b97;
+}
+.loginbtn1{
+    display:block;
+}
+.loginbtn2{
+    display:none;
+}

@@ -22,9 +22,9 @@
                         <input type="text" id="email" class="emailin" autocomplete="on" required>
                          <legend for="email">Email</legend>
                     </div>
-                    <p class="errormsg">* Enter valid email</p>
+                    <p class="errmsg" id="errormsg">* Enter valid email</p>
                 </div>
-                <div class="">
+                <div class="passwordcontainer">
                     <div class="input-content">
                         <input type="Password" id="password" class="passwordlogin" autocomplete="new-password" required>
                         <legend for="password">New Password</legend>
@@ -36,14 +36,15 @@
                     </div>
                     
                 </div>
-                <div class="errmsg">
-                    <p>*Passwords do not match</p>
-                </div>    
+                <p class="errmsg2" id="errmsg2">* Passwords do not match</p>
+                
+                    
                 
                     
                     <br>
                     <div class="button-container">
-                        <button type="button" onclick="resetpassword()" class="loginbtn">Reset Password</button>
+                        <button type="submit" onclick="resetpassword()" class="loginbtn1" id="resetbtn">Reset Password</button>
+                        <button type="submit" onclick="samepassword()" class="loginbtn2" id="donebtn">Done</button>
                     </div>
                     
                 </div>
@@ -52,7 +53,7 @@
         </div>
 
     </div>
-    <script src="script.js"></script>
+    <script src="script.mjs"></script>
 </body>
 
 </html>
