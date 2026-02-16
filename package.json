@@ -2,8 +2,11 @@
     "name": "login-system",
     "version": "1.0.0",
     "description": "A simple login system built with HTML, CSS, and JavaScript.",
-    "main":"index.html",
-    "scripts":{
+    "main": "index.html",
+    "scripts": {
         "start": "node server.js"
-    }  
+    },
+    "dependencies": {
+        "cors": "^2.8.6"
+    }
 }

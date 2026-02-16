@@ -66,13 +66,27 @@ document.getElementById("logpage").addEventListener("click", function() {
 });
 
 function forgotpassword() {
+    const link = document.getElementById("forgotLink");
+const transition = document.querySelector(".fishimage");
+const scalein=document.querySelector(".login-container");
+const forgot=document.querySelector(".forgot-container");
+link.addEventListener("click", function(e) {
+  e.preventDefault(); // stop immediate navigation
+  
+
+  
+  setTimeout(() => {
     window.location.href = "forgotpass.html";
+  }, 500); // match CSS duration
+});
+    
     const email=document.getElementById("email").value;
     
     fetch("http://localhost:3000/forgot-password",{
 
-})
+});
 }
+
 
  function resetpassword(){
     const email=document.getElementById('email');

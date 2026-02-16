@@ -220,13 +220,42 @@ span:hover{
 /* style for login page */
 
 .backgroundImage{
-    background: #01010b;
+    background: #17373b;
     display: flex;
     align-items: center;
     justify-content: center;
     min-width:100vw;
     flex-direction: column;
     min-height:100vh;
+    position:relative;
+}
+.fishimage{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    opacity:0.5;
+    background:url("https://images.unsplash.com/photo-1548032885-b5e38734688a?q=80&w=956&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center/cover;
+    backdrop-filter: blur(12px);
+    min-height:100vh;
+    min-width:100vw;
+    transition:opacity 0.6s ease;
+    animation: wave 15s infinite ease-in-out;
+}
+.fishimage.active{
+    opacity:1;
+    
+}
+
+@keyframes wave {
+  0% { background-position: center ; }
+  50% { background-position: center 10px; }
+  100% { background-position: center; }
+}
+
+@media (min-width:800px){
+    .fishimage{
+        scale:1;
+    }
 }
 img{
     height:160px;
@@ -243,18 +272,19 @@ img{
     padding-right:30px;
     margin-bottom:15px;
 }
+
 .login-container{
     display:flex;
     flex-direction: column;
     align-items:center;
     justify-content:center;
     background-color:#01010b;
-    padding:20px 50px 60px 70px;
+    padding:20px 50px 50px 70px;
     border-radius:20px;
     box-shadow: 4px 4px 4px 2px rgba(59, 61, 61, 0.2);
     height:auto;
     width:auto;
-
+    transition:transform 0.5s ease, opacity 0.5s ease;
     /* glassmorphism*/
     background: rgba(62, 61, 61, 0.644);
     backdrop-filter: blur(14px);
@@ -262,6 +292,7 @@ img{
    
     /*neon edges*/
     animation:blink 2s ease infinite;
+    animation:opacityfadeout 0.5s ease;
 }
 @keyframes blink{
     0%{
@@ -279,23 +310,19 @@ img{
     }
 }
 
-.login-container:hover{
-    animation:shake 0.5s easse-in-out;
-    
+@keyframes opacityfadeout{
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
-@keyframes shake{
-    0%{
-        translateX:0px;
-        
-    } 25%{
-        translateX:5px;
-    } 50%{
-        translateX:5px;
-    } 75%{
-        translateX:5px;
-    } 100%{
-        translateX:0px;
-    }
+.login-container.fade-in {
+  opacity:0;
+  transform: translateY(-20px);
+  
+}
+
+@keyframes opacityfadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 .headcontainer{
     display:flex;
@@ -389,7 +416,7 @@ button{
     width: 10rem;
     border-radius:5px;
     border:none;
-    background-color:#1c52a9;
+    background-color:#4f87db;
     color:#fff;
     font-weight: light;
     margin-bottom:10px;
@@ -432,28 +459,23 @@ input[type=checkbox]{
     color:#dd8b97;
  }
  .login-container:hover{
-    animation:shake 1.2s ease;
-    box-shadow:0px 0px 22px #1c52a9 ,
-    0px 0px 22px #124578;
+    box-shadow:0px 0px 22px #53bfa4 ,
+    0px 0px 22px #84e0cb;
+    transform: scale(1.04);
+    transition: transform 0.5s ease-in-out;
  }
 
- @keyframes shake{
-    0%{
-        transform:translateX(0);
+ @media (max-width:460px){
+    .login-container{
+        width:100%;
+        height:100%;
+        padding:20px 30px 60px 30px;
+        
+    }
 
-    } 
-    25%{
-        transform:translateX(5px) rotate(2deg);
-    }50%{
-        transform:translateX(-5px) rotate(-2deg);
-    }75%{
-        transform:translateX(5px) rotate(2deg);
-    }
-    100%{
-        transform:translateX(0);
-    }
- 
-}
+ }
+
+
 
 
 
@@ -471,6 +493,48 @@ input[type=checkbox]{
 
 
  /* style for forgot password page */
+ .forgot-container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    background-color:#01010b;
+    padding:20px 50px 50px 70px;
+    border-radius:20px;
+    box-shadow: 4px 4px 4px 2px rgba(59, 61, 61, 0.2);
+    height:auto;
+    width:auto;
+    transition:transform 0.6s ease, opacity 0.6s ease,filter 0.6s ease;
+    /* glassmorphism*/
+    background: rgba(62, 61, 61, 0.644);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+   
+    /*neon edges*/
+    animation:blink 2s ease infinite;
+    opacity:0;
+    transform:translateY(20px);
+    animation: opacityfadein 0.5s ease;
+    
+}
+
+@keyframes opacityfadein {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+ .forgot-container:hover{
+    box-shadow:0px 0px 22px #53bfa4 ,
+    0px 0px 22px #84e0cb;
+    transform: scale(1.04);
+    transition: transform 0.5s ease-in-out;
+ }
+
+.forgot-container.fade-out{
+    opacity:0;
+    transform:translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+ }
  .input-content{
     padding:10px;
     margin-top:25px;
@@ -489,8 +553,11 @@ input[type=checkbox]{
     left:50%;
     background-color: #01010b;
     color:#bbb;
-    outline: 2px solid #bbb;
+    outline: 2px solid #8fb2e795;
     border:none;
+    background: rgba(62, 61, 61, 0.644);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 }
 
 
@@ -508,9 +575,9 @@ input[type=checkbox]{
 .input-content input:focus + legend{
     top:-20px;
     font-size: 17px;
-    color:#f7f9fb;
+    color:#161f28;
     left:15px;
-    background-color:#01010b;
+    background-color:#7dbfdea3;
 }
 .input-content input:focus{
     outline: 2px solid #a9c7fb;
@@ -520,7 +587,7 @@ input[type=checkbox]{
     top:0px;
     font-size: 17px;
     color:#e0e8e9;
-    background-color:#01010b;
+    background-color:rgb(62, 61, 61);
     left:18px;
     
 }
