@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+    <div id="loginpage">
+        <div class="backgroundImage">
+            <div class="fishimage"></div>
+            <div class="login-container">
+                <div class="headcontainer">
+                    <img src="odin-lined.png" alt="">
+                    <h1 class="odintext">ODIN</h1>
+                </div>
+
+                <form action="#" autocomplete="off" class="login">
+                    <p class="loginhead">Log In</p>
+                    <div>
+                        <div class="input-con">
+                            <input type="text" id="email" class="emailin" autocomplete="on" required>
+                            <legend for="email">Email</legend>
+                        </div>
+                        <p class="errormsg">* Enter valid email</p>
+                        <div class="input-con">
+                            <input type="Password" id="password" class="passwordlogin" autocomplete="new-password"
+                                required>
+                            <legend for="password">Password</legend>
+                        </div>
+                        <p class="errormsg">* Invalid password for email</p>
+                        <div class="forgottext">
+                            <a onclick="forgotPassword()" id="forgotLink">Forgot Password?</a>
+                        </div>
+
+                        <br>
+                        <div class="button-container">
+                            <button type="button" onclick="login()" class="loginbtn">Log In</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="p">Don't have an account? <a href="index.html">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="forgotpass">
+        <div class="backgroundImage">
+            <div class="fishimage"></div>
+            <div class="forgot-container">
+                <div class="headcontainer">
+                    <img src="odin-lined.png" alt="">
+                    <h1 class="odintext">ODIN</h1>
+                </div>
+
+                <form action="#" autocomplete="off" class="login">
+                    <p class="loginhead">Reset Password</p>
+                    <div class="emailcontainer">
+                        <div class="input-content">
+                            <input type="text" id="forgotEmail" class="emailin" autocomplete="on" required>
+                            <legend for="forgotEmail">Email</legend>
+                        </div>
+                        <p class="errmsg" id="errormsg">* Enter valid email</p>
+                    </div>
+                    <div class="passwordcontainer">
+                        <div class="input-content">
+                            <input type="Password" id="forgotPassword" class="passwordlogin" autocomplete="new-password"
+                                required>
+                            <legend for="forgotPassword">New Password</legend>
+                        </div>
+                        <div class="input-content">
+                            <input type="Password" id="confirmforgotPassword" class="passwordlogin"
+                                autocomplete="new-password" required>
+                            <legend for="confirmforgotPassword">Confirm New Password</legend>
+                        </div>
+                    </div>
+                    <p class="errmsg2" id="errmsg2">* Passwords do not match</p>
+                    <p class="errmsg3" id="errmsg3">* passwords less than 8 chanracters</p>
+                    <br>
+                    <div class="button-container">
+                        <button type="button" onclick="resetpassword()" class="loginbtn1" id="resetbtn">Reset
+                            Password</button>
+                        <button type="button" onclick="samepassword()" class="loginbtn2" id="donebtn">Done</button>
+                    </div>
+                </form>
+            </div>
+            
+
+        </div>
+
+    </div>
+    </div>
+
+    <script src="public/js/script.mjs"></script>
+</body>
+
+</html>
